@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>OfferShow</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>1 leedcode</module>
+        <module>2 并发编程</module>
+        <module>3 JVM</module>
+        <module>4 Spring</module>
+        <module>5 Netty</module>
+        <module>6 Redis学习</module>
+        <module>7 中间件学习</module>
+        <module>8 Redis和Mysql</module>
+        <module>9 设计模式</module>
+        <module>10网络编程</module>
+        <module>11分布式学习</module>
+        <module>1 二叉树</module>
+    </modules>
+
+
+</project>
