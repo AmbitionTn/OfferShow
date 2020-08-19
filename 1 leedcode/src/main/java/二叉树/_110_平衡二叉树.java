@@ -1,5 +1,11 @@
 package 二叉树;
 
+class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
+    TreeNode(int x) { val = x; }
+}
 
 /**
  * 110. 平衡二叉树
@@ -9,7 +15,7 @@ package 二叉树;
  *
  * @url： https://leetcode-cn.com/problems/balanced-binary-tree/
  */
-class Solution110 {
+class _110_平衡二叉树 {
     /**
      * 递归判断是否是左子树和右子树深度，是否相差1
      * 同时递归判断左子树和右子树是否是平衡树
@@ -36,4 +42,5 @@ class Solution110 {
         }
         return Math.max(getTreeDeapth(root.right), getTreeDeapth(root.left)) + 1;
     }
+
 }
