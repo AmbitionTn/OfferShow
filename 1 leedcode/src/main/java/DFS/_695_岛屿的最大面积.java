@@ -1,4 +1,4 @@
-package dfs;
+package DFS;
 
 /**
  * 695 岛屿的最大面积
@@ -8,7 +8,7 @@ package dfs;
  *
  * @url https://leetcode-cn.com/problems/max-area-of-island/submissions/
  */
-public class Solution695 {
+public class _695_岛屿的最大面积 {
     public int maxAreaOfIsland(int[][] grid) {
         int max = 0;
         for (int i = 0; i < grid.length; i++) {

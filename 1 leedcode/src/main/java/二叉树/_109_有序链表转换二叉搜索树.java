@@ -1,7 +1,7 @@
 package 二叉树;
 
 /**
- * 109 回文子串
+ * 109 有序链表转换二叉搜索树
  * @author tning
  * @create 2020/08/18
  *
@@ -29,7 +29,7 @@ class TreeNode109 {
      }
 }
 
-public class _109_回文子串 {
+public class _109_有序链表转换二叉搜索树 {
     public TreeNode sortedListToBST(ListNode109 head) {
 
         return null;

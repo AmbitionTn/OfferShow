@@ -1,4 +1,4 @@
-package dfs;
+package DFS;
 
 /**
  * 200 岛屿数量
@@ -8,7 +8,7 @@ package dfs;
  *
  * @url: https://leetcode-cn.com/problems/number-of-islands/
  */
-public class Solution200 {
+public class _200_岛屿数量 {
     public int numIslands(char[][] grid) {
         int cnt = 0;
         for (int i = 0; i < grid.length; i++) {
