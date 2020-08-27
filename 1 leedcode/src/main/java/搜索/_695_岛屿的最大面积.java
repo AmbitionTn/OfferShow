@@ -1,4 +1,4 @@
-package DFS;
+package 搜索;
 
 /**
  * 695 岛屿的最大面积

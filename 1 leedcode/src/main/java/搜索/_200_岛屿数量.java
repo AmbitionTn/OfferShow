@@ -1,4 +1,4 @@
-package DFS;
+package 搜索;
 
 /**
  * 200 岛屿数量
