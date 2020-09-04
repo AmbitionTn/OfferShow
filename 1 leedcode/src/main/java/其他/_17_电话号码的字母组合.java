@@ -12,6 +12,11 @@ import java.util.List;
  * @create 2020/08/25
  */
 public class _17_电话号码的字母组合 {
+    /**
+     * 使用队列 每一次拿出第一个拼接后面的新字符后继续加入队列
+     * @param digits
+     * @return
+     */
     public List<String> letterCombinations(String digits) {
         if (digits == null || digits.length() == 0) {
             return new ArrayList<String>();
