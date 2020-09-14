@@ -1,3 +1,5 @@
+package Multiplexing;
+
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
@@ -11,7 +13,7 @@ import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class SocketMultiplexingSingleThreads {
+public class MultiplexingTest2 {
     private ServerSocketChannel server = null;
     private Selector selector1;
     private Selector selector2;
@@ -38,7 +40,7 @@ public class SocketMultiplexingSingleThreads {
     }
 
     public static void main(String[] args) {
-        SocketMultiplexingSingleThreads service = new SocketMultiplexingSingleThreads();
+        MultiplexingTest2 service = new MultiplexingTest2();
         service.initServer();
         NioThread nioThread1 = new NioThread(service.selector1, 2);
         NioThread nioThread2 = new NioThread(service.selector2);
