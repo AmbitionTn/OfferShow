@@ -1,4 +1,4 @@
-package 二叉树;
+package 剑指Offer;
 
 /**
  * @author taoning

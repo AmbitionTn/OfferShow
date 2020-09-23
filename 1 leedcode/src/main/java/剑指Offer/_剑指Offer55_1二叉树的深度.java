@@ -1,4 +1,4 @@
-package 二叉树;
+package 剑指Offer;
 
 /**
  * 剑指 Offer 55 - I. 二叉树的深度

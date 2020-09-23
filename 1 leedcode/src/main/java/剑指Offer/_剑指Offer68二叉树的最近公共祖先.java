@@ -1,4 +1,4 @@
-package 二叉树;
+package 剑指Offer;
 
 /**
  * 剑指Offer68二叉树的最近公共祖先

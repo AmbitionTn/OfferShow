@@ -1,4 +1,4 @@
-package 动态规划;
+package 剑指Offer;
 
 /**
  * @author taoning

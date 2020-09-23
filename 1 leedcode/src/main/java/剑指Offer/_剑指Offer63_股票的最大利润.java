@@ -1,4 +1,4 @@
-package 其他;
+package 剑指Offer;
 
 /**
  * 剑指 Offer 63. 股票的最大利润

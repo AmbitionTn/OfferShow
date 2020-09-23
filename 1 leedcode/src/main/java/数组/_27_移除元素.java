@@ -5,4 +5,7 @@ package 数组;
  * @create 2020/9/16
  */
 public class _27_移除元素 {
+    public int removeElement(int[] nums, int val) {
+        
+    }
 }

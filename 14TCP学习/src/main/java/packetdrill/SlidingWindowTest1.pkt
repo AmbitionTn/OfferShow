@@ -1,0 +1,26 @@
+--tolerance_usecs=100000
+0 socket(..., SOCK_STREAM, IPPROTO_TCP) = 3
++0 setsockopt(3, SOL_SOCKET, SO_REUSEADDR, [1], 4) = 0
+// 禁用 nagle 算法
++0 setsockopt(3, SOL_TCP, TCP_NODELAY, [1], 4) = 0
++0 bind(3, ..., ...) = 0
++0 listen(3, 1) = 0
+
+// 三次握手
++0  < S 0:0(0) win 20 <mss 1000>
++0  > S. 0:0(0) ack 1 <...>
++.1 < . 1:1(0) ack 1 win 20
++0  accept(3, ..., ...) = 4
+
+// 演示已经发送并 ACK 前 31 字节数据
++.1  write(4, ..., 15) = 15
++0 < . 1:1(0) ack 16 win 20
++.1  write(4, ..., 16) = 16
++0 < . 1:1(0) ack 32 win 20
+
++0  write(4, ..., 14) = 14
++0  write(4, ..., 6) = 6
+
++.1 < . 1:1(0) ack 52 win 20
+
++0 `sleep 1000000`

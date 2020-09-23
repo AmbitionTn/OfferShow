@@ -1,4 +1,4 @@
-package 二叉树;
+package 剑指Offer;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -47,4 +47,11 @@ public class _剑指Offer07重建二叉树 {
                 , inRoot + 1, inEnd, map);
         return root;
     }
+}
+
+class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
+    TreeNode(int x) { val = x; }
 }
