@@ -6,6 +6,6 @@ package 数组;
  */
 public class _27_移除元素 {
     public int removeElement(int[] nums, int val) {
-        
+        return 0;
     }
 }
