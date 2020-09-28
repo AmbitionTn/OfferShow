@@ -9,6 +9,7 @@ package 剑指Offer;
  */
 public class _剑指Offer33二叉搜索树的后序遍历序列 {
     public boolean verifyPostorder(int[] postorder) {
+
         return true;
     }
 }
