@@ -1,5 +1,7 @@
 package 链表;
 
+import java.util.concurrent.ConcurrentHashMap;
+
 /**
  * 141 环形链表
  *
