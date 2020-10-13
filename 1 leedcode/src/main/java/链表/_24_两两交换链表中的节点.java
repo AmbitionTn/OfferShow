@@ -8,20 +8,38 @@ package 链表;
  * @create 2020/9/13
  */
 public class _24_两两交换链表中的节点 {
-    public ListNode24 swapPairs(ListNode24 head) {
-        ListNode24 dummy = new ListNode24(-1);
-        dummy.next = head;
-
-        ListNode24 preNode = dummy;
-        while (head != null && head.next != null){
-
+    /**
+     * 引入哨兵节点：然后主要是注意梳理节点之间的引用关系，就可以直接AC
+     * 在写代码是要注意边界的考虑，例如head为null或者head.next为null
+     *
+     * @param head
+     * @return
+     */
+    public ListNode swapPairs(ListNode head) {
+        if (head == null || head.next == null) {
+            return head;
         }
-        return dummy.next;
+        ListNode preNode = new ListNode(0);
+        ListNode newHead = head.next;
+        preNode.next = head;
+
+        while (preNode.next != null && preNode.next.next != null) {
+            ListNode p1 = preNode.next;
+            ListNode p2 = p1.next;
+            p1.next = p2.next;
+            p2.next = p1;
+            preNode.next = p2;
+            preNode = p1;
+        }
+        return newHead;
     }
 }
 
 class ListNode24 {
     int val;
     ListNode24 next;
-    ListNode24(int x) { val = x; }
+
+    ListNode24(int x) {
+        val = x;
+    }
 }
