@@ -7,10 +7,12 @@ import java.lang.reflect.Method;
  */
 public class Main {
     public static void main(String[] args) throws ClassNotFoundException, IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException {
-        ConvertClassLoader classLoader = new ConvertClassLoader("/Users/tning/Documents/Hello/");
+        ConvertClassLoader classLoader = new ConvertClassLoader("resourcePath");
         classLoader.setFileName("Hello.xlass");
         Object object = classLoader.findClass("Hello").newInstance();
-        Method method = object.getClass().getMethod("hello");
-        method.invoke(object);
+        if (object != null){
+            Method method = object.getClass().getMethod("hello");
+            method.invoke(object);
+        }
     }
 }

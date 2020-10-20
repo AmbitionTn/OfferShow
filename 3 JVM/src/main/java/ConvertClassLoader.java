@@ -1,4 +1,5 @@
 import java.io.*;
+import java.net.URL;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 
@@ -24,8 +25,11 @@ public class ConvertClassLoader extends ClassLoader {
 
     @Override
     protected Class<?> findClass(String name) throws ClassNotFoundException {
-        File file = new File(classPath + "/" + fileName);
-        System.out.println(file.getName());
+        URL url = this.getClass().getClassLoader().getResource(classPath + "/" + fileName);
+        if (url == null) {
+            return null;
+        }
+        File file = new File(url.getPath());
         try {
             byte[] bytes = decode(getClassBytes(file));
             return defineClass(name, bytes, 0, bytes.length);

@@ -1,5 +1,7 @@
 package 链表;
 
+import java.util.Stack;
+
 /**
  * 143. 重排链表
  *
@@ -11,29 +13,23 @@ public class _143重排链表 {
     private ListNode pointNode;
 
     public void reorderList(ListNode head) {
-        pointNode = head;
-        change(head.next, pointNode);
-    }
-
-    /**
-     * 使用递归栈：将数组一个个的替换
-     *
-     * @param curr
-     */
-    public void change(ListNode curr, ListNode pre) {
-        if (pointNode.next == curr || pointNode.next.next == curr) {
-            return;
+        Stack<ListNode> stack = new Stack();
+        ListNode tmp = head;
+        int len = 0;
+        while (tmp != null) {
+            stack.push(tmp);
+            tmp = tmp.next;
+            len++;
         }
-
-        if (curr.next != null) {
-            change(curr.next, curr);
+        ListNode p = head;
+        for (int i = 0; i < len/2; i++) {
+            ListNode q = stack.pop();
+            q.next = p.next;
+            p.next = q;
+            p = q.next;
         }
-
-        System.out.println(curr.val);
-        ListNode tmp = pointNode;
-        pre.next = curr.next;
-        pointNode.next = curr;
-        curr.next = tmp.next;
-        pointNode = pointNode.next;
+        if (p != null){
+            p.next = null;
+        }
     }
 }
